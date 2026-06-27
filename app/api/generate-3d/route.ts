@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     let mimeType = "image/jpeg";
 
     if (imageBase64.startsWith("data:")) {
-      const match = imageBase64.match(/^data:([^;]+);base64,(.+)$/s);
+      const match = imageBase64.match(/^data:([^;]+);base64,([\s\S]+)$/);
       if (match) {
         mimeType = match[1];
         base64Data = match[2].replace(/\s/g, ""); // remove any whitespace
