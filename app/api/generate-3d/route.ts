@@ -14,15 +14,15 @@ export async function POST(req: NextRequest) {
     }
 
     const stylePrompts: Record<string, string> = {
-      original: "collectible toy figurine, chibi style, based on the character in the image",
-      superhero: "superhero collectible toy figurine with cape, chibi style, based on the character in the image",
-      fantasy: "fantasy collectible toy figurine with magical elements, chibi style, based on the character in the image",
-      cartoon: "cartoon collectible toy figurine, bold outlines, chibi style, based on the character in the image",
-      animal: "cute animal collectible toy figurine, chibi style, based on the character in the image",
-      space: "space explorer collectible toy figurine with helmet, chibi style, based on the character in the image",
-      princess: "princess collectible toy figurine with crown, chibi style, based on the character in the image",
-      pirate: "pirate collectible toy figurine, chibi style, based on the character in the image",
-    };
+  original: "3D collectible toy figurine, full body character, standing pose, chibi proportions, smooth surfaces, physical toy",
+  superhero: "3D superhero toy figurine, full body standing, cape, heroic pose, chibi proportions, physical collectible toy",
+  fantasy: "3D fantasy creature toy figurine, full body standing, magical wings, chibi proportions, physical collectible toy",
+  cartoon: "3D cartoon toy figurine, full body standing, expressive face, chibi proportions, physical collectible toy",
+  animal: "3D cute animal toy figurine, full body standing, soft friendly appearance, chibi proportions, physical collectible toy",
+  space: "3D astronaut toy figurine, full body standing, space helmet, chibi proportions, physical collectible toy",
+  princess: "3D princess toy figurine, full body standing, crown and dress, chibi proportions, physical collectible toy",
+  pirate: "3D pirate toy figurine, full body standing, bandana, chibi proportions, physical collectible toy",
+};
 
     const stylePrompt = stylePrompts[styleId] || stylePrompts.original;
     const fullPrompt = childName
